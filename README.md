@@ -1,78 +1,71 @@
-## AI-Driven Software Engineering ## 
+## AI-Driven Software Engineering
 
-## Descrição do Projeto
+# Prototipação de um Fluxo de Desenvolvimento Assistido por IA
 
-Este projeto foi desenvolvido como parte da atividade prática da disciplina de Engenharia de Software Orientada por IA. O objetivo é demonstrar a aplicação de Inteligência Artificial no processo de desenvolvimento de software, utilizando boas práticas como testes automatizados, versionamento de código e integração com ferramentas modernas.
+# Contexto do Desafio (Análise do Problema)
 
-## Problema Proposto
+No cenário atual de desenvolvimento de software, equipes de engenharia frequentemente enfrentam um dilema entre velocidade de entrega e qualidade do código. A pressão por prazos curtos muitas vezes resulta em código pouco testado, aumento de bugs em produção e retrabalho constante, impactando diretamente a produtividade da equipe e a confiabilidade das entregas.
+Neste contexto, considera-se uma empresa fictícia de tecnologia que desenvolve sistemas internos para gestão de pedidos. A equipe enfrenta dificuldades para manter um fluxo de desenvolvimento ágil sem comprometer a qualidade, especialmente no que se refere à criação de regras de negócio e à validação por meio de testes automatizados.
 
-Criar uma função em JavaScript responsável por calcular o valor total de um pedido, aplicando automaticamente 10% de desconto quando o valor ultrapassar R$ 100,00.
-Além disso, o projeto deveria conter testes automatizados para validar diferentes cenários e garantir a qualidade da solução.
+# Objetivo do Projeto
 
-# Solução Implementada
+O objetivo deste projeto é demonstrar, por meio de um protótipo funcional, como o uso combinado de Inteligência Artificial e automação de processos pode ajudar a resolver o dilema entre velocidade e qualidade no desenvolvimento de software.
 
-Foi criada a função calculateOrderTotal, localizada no arquivo:
+Para isso, o projeto propõe:
 
-src/orderService.js
+- Utilizar o GitHub Copilot como ferramenta de apoio à geração de código e testes.
+- Implementar testes automatizados para garantir a qualidade da lógica de negócio.
+- Configurar um pipeline de Integração Contínua (CI) com GitHub Actions, assegurando que os testes sejam executados automaticamente a cada alteração no código.
 
-## Funcionalidades da função:
+# Uso da Inteligência Artificial no Desenvolvimento (GitHub Copilot)
 
-- Recebe o valor do pedido como parâmetro
-- Valida se o valor informado é um número válido
-- Aplica 10% de desconto quando o valor é superior a R$ 100,00
-- Retorna o valor final do pedido
-- Lança erro em casos de valores inválidos
+Durante o desenvolvimento do projeto, o GitHub Copilot foi utilizado como ferramenta de apoio para acelerar a criação da lógica principal de negócio e seus respectivos testes automatizados.
+A função central do sistema é responsável por calcular o valor total de um pedido, aplicando regras de desconto conforme o valor da compra. Tanto a função quanto os testes foram gerados com o auxílio do Copilot, utilizando prompts descritivos diretamente no editor de código.
 
-# Testes Automatizados
+Exemplo de comentário presente no código:
 
-Os testes automatizados foram desenvolvidos utilizando o Jest, garantindo a confiabilidade da função.
+// Gerado com o prompt: "Crie uma função que calcula o total de pedidos aplicando desconto para valores acima de um limite"
 
-Arquivo de testes:
+Essa abordagem demonstra, de forma prática, como a IA pode reduzir o tempo de desenvolvimento, mantendo clareza e padronização no código produzido.
 
-tests/orderService.test.js 
+# Projeto Funcional Desenvolvido
 
-## Os testes cobrem:
+O projeto consiste em uma aplicação simples em Node.js, organizada da seguinte forma:
 
-- Valores sem desconto (≤ R$ 100)
-- Valores com desconto (> R$ 100)
-- Valores decimais
-- Tratamento de erros (valores inválidos)
+- src/: contém a lógica principal de negócio.
+- tests/: contém os testes automatizados da aplicação.
+- package.json: gerenciamento de dependências e scripts.
+- .github/workflows/: configuração do pipeline de CI com GitHub Actions.
 
-Todos os testes foram executados com sucesso, garantindo que a função funciona corretamente em todos os cenários propostos.
+Os testes automatizados validam os principais cenários da regra de negócio, garantindo que alterações futuras não quebrem o comportamento esperado da aplicação.
 
-## Uso de Inteligência Artificial no Desenvolvimento
+# Integração Contínua com GitHub Actions (CI/CD)
 
-A Inteligência Artificial foi utilizada de forma estratégica ao longo de todo o processo de desenvolvimento deste projeto, atuando como uma ferramenta de apoio à Engenharia de Software.
+Foi configurado um workflow funcional do GitHub Actions, localizado em:
 
-Durante a fase inicial, a IA auxiliou na compreensão detalhada do problema proposto, permitindo a correta interpretação dos requisitos funcionais, especialmente no que se refere à regra de negócio relacionada à aplicação automática de desconto.
+*.github/workflows/nodejs.yml*
 
-Na etapa de implementação, ferramentas baseadas em IA, como o ChatGPT e o GitHub Copilot, foram utilizadas para:
+Esse workflow é executado automaticamente a cada push ou pull request na branch principal (main) e realiza as seguintes etapas:
 
-- Apoiar a estruturação lógica da função desenvolvida
-- Sugerir boas práticas de programação em JavaScript
-- Auxiliar na escrita de código limpo, legível e bem documentado
-- Contribuir para a criação de testes automatizados mais completos
+1. Faz o checkout do código do repositório.
+2. Configura o ambiente Node.js.
+3. Instala as dependências do projeto.
+4. Executa os testes automatizados.
 
-É importante destacar que a IA não substituiu o desenvolvedor, mas atuou como um instrumento de suporte, aumentando a produtividade, reduzindo erros e promovendo maior qualidade no código final. Todas as decisões de implementação foram compreendidas e validadas pelo desenvolvedor, garantindo domínio total sobre a solução apresentada.
+Essa configuração garante feedback rápido sobre a qualidade do código, reforçando boas práticas de Integração Contínua (CI) e reduzindo a chance de erros chegarem à produção.
 
-## Como Executar o Projeto
+# Status do Pipeline (Build)
 
-Pré-requisitos:
+O status do pipeline de integração contínua pode ser acompanhado diretamente pelo badge abaixo, que indica se o workflow está sendo executado com sucesso:
 
-Node.js instalado
+![CI](https://github.com/Thavi22/AI-Driven-Software-Engineering/actions/workflows/nodejs.yml/badge.svg)
 
-Passos para execução:
+# Considerações Finais sobre o Impacto da IA
 
-npm install
-npm test
+A utilização de ferramentas de IA, como o GitHub Copilot, demonstra um impacto significativo na produtividade das equipes de desenvolvimento, especialmente quando combinada com práticas modernas de automação, como testes automatizados e pipelines de CI/CD.
+Este projeto evidencia que a IA não substitui o desenvolvedor, mas atua como um acelerador de produtividade, permitindo que o profissional foque em decisões de arquitetura, validação de regras de negócio e qualidade do software entregue.
+A integração entre IA + testes + automação representa uma tendência sólida no desenvolvimento moderno, contribuindo para entregas mais rápidas, seguras e sustentáveis.
 
-Os testes serão executados automaticamente e o resultado será exibido no terminal.
+# Conclusão
 
-## Conclusão
-
-O desenvolvimento deste projeto possibilitou a aplicação prática dos conceitos abordados na disciplina de Engenharia de Software Orientada por Inteligência Artificial, permitindo a integração entre teoria e prática de forma clara e objetiva.
-A implementação da função de cálculo de pedidos, aliada à criação de testes automatizados, evidenciou a importância da validação de regras de negócio e da garantia de qualidade do software. O uso de testes contribuiu para a confiabilidade da solução, assegurando que diferentes cenários fossem corretamente tratados.
-A utilização de ferramentas de Inteligência Artificial ao longo do desenvolvimento mostrou-se um recurso relevante para apoiar o processo de construção do software, auxiliando na organização do raciocínio lógico, na adoção de boas práticas e na melhoria da produtividade. Ressalta-se que a IA foi empregada como suporte ao desenvolvedor, sem substituir a análise crítica e o entendimento humano das decisões tomadas.
-Dessa forma, o projeto reforça a relevância da IA como aliada no desenvolvimento de software moderno, desde que utilizada de maneira consciente e responsável, contribuindo para soluções mais eficientes, bem estruturadas e alinhadas às necessidades do negócio.
-
-
+O protótipo desenvolvido cumpre o objetivo de demonstrar, de forma prática e conceitual, como um fluxo de desenvolvimento assistido por IA pode equilibrar velocidade e qualidade. A combinação de GitHub Copilot e GitHub Actions mostrou-se eficaz para melhorar a produtividade da equipe e elevar o nível de confiabilidade do processo de desenvolvimento de software.
