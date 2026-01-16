@@ -71,3 +71,12 @@ A integração entre IA + testes + automação representa uma tendência sólida
 # Conclusão
 
 O protótipo desenvolvido cumpre o objetivo de demonstrar, de forma prática e conceitual, como um fluxo de desenvolvimento assistido por IA pode equilibrar velocidade e qualidade. A combinação de GitHub Copilot e GitHub Actions mostrou-se eficaz para melhorar a produtividade da equipe e elevar o nível de confiabilidade do processo de desenvolvimento de software.
+
+## Caso Real de Uso
+
+Ferramentas de automação e assistência por IA já são amplamente utilizadas na indústria de software. A Microsoft disponibiliza repositórios oficiais demonstrando o uso do GitHub Actions para automação de build e testes em aplicações reais, evidenciando a importância de pipelines de CI/CD para garantir qualidade contínua no desenvolvimento. Da mesma forma, empresas como a Shopify utilizam GitHub Actions para automatizar processos de deploy e testes, acelerando entregas sem comprometer a confiabilidade do software.
+
+Fonte:
+- Microsoft – GitHub Actions for Desktop Apps: https://github.com/microsoft/github-actions-for-desktop-apps
+- Shopify – GitHub Deployment Action: https://github.com/Shopify/github-deployment-action
+
