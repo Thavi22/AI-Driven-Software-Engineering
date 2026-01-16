@@ -60,7 +60,7 @@ O status do pipeline de integração contínua pode ser acompanhado diretamente 
 
 # AI-Driven Software Engineering
 
-![Node.js CI](https://github.com/Thavi22/AI-Driven-Software-Engineering/actions/workflows/nodejs.yml/badge.svg?branch=main)
+![Node.js CI](https://github.com/Thavi22/AI-Driven-Software-Engineering/actions/workflows/nodejs.yml/badge.svg?branch=main&event=push)
 
 # Considerações Finais sobre o Impacto da IA
 
