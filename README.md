@@ -58,7 +58,9 @@ Essa configuração garante feedback rápido sobre a qualidade do código, refor
 
 O status do pipeline de integração contínua pode ser acompanhado diretamente pelo badge abaixo, que indica se o workflow está sendo executado com sucesso:
 
-![Node.js CI](https://github.com/Thavi22/AI-Driven-Software-Engineering/actions/workflows/nodejs.yml/badge.svg)
+# AI-Driven Software Engineering
+
+![Node.js CI](https://github.com/Thavi22/AI-Driven-Software-Engineering/actions/workflows/nodejs.yml/badge.svg?branch=main)
 
 # Considerações Finais sobre o Impacto da IA
 
